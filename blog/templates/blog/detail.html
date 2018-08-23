@@ -1,0 +1,27 @@
+{% extends "personal/base.html" %}
+{% block content %}
+{% load static %}
+  <div class = "container" id="blog">
+    <div class="row">
+      <div class="col-md-auto">
+        {% include "blog/includes/recentposts.html" %}
+      </div>
+      <div class = "col-md mt-3">
+        <img class="img-fluid img-thumbnail" src="{{post.header.url}}">
+        <h2 class="mt-2" style="color:#0074D9;">{{post.title}}</h2>
+        <h5 style="color:#0074D9;">{{post.summary}}</h5>
+        {% for paragraph in post.paragraph_set.all %}
+          <p>{{paragraph.content}}</p>
+            {% if paragraph.main_image and paragraph.caption %}
+              <center>
+              <figure class="figure">
+                <img src="{{ paragraph.main_image.url }}" class="figure-img img-fluid img-thumbnail" alt="{{paragraph.caption}}">
+                <figcaption class="figure-caption text-center">{{paragraph.caption}}</figcaption>
+              </figure>
+              </center>
+            {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

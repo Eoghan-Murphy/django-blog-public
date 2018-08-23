@@ -1,0 +1,166 @@
+{% extends "personal/base.html" %}
+
+{% block content %}
+{% load static %}
+<div id="home">
+  <div id="about" class="container" style="margin-top:56px;">
+    <div class ="row justify-content-center">
+
+      <div class = "col-sm-4 align-self-center">
+        <center>
+          <img src="{% static 'personal/img/elogo.svg' %}" class="img-fluid" alt="Logo" style="max-width: 60%">
+        </center>
+      </div>
+      <div class = "col-sm-6 align-self-center">
+        <center>
+          <h1 style= "color: #0074D9"> Eoghan Murphy</h1>
+          <h3>A Third Year Computer Applications Student at Dublin City University with an Interest in Software Development.</h3>
+        </center>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="projects" class="container" style="padding-top:56px;">
+    <center>
+    <h2>Projects</h2>
+  </center>
+    <div class ="row">
+      <div class = "col-sm pb-3">
+        <center>
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="{% static 'personal/img/tightrope.png' %}" alt="Screenshot of game 'TightRope!'">
+          <div class="card-body">
+            <h5 class="card-title">TightRope!</h5>
+            <p class="card-text">An arcade game about balancing on a rope, released on the Google Play Store.</p>
+            <p><small>Skills: C#, Unity, Illustrator, Blender</small><p>
+            <a href="https://play.google.com/store/apps/details?id=com.ghostmuttgames.tightrope" class="btn btn-primary">Check It Out</a>
+          </div>
+        </div>
+        </center>
+      </div>
+      </div>
+    </div>
+
+
+  <div class="container pt-5" id="grades" style="padding-top:56px;">
+    <h2>Grades</h2>
+
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link" id="pills-year1-tab" data-toggle="pill" href="#pills-year1" role="tab" aria-controls="pills-year1" aria-selected="false">Year 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" id="pills-year2-tab" data-toggle="pill" href="#pills-year2" role="tab" aria-controls="pills-year2" aria-selected="true">Year 2</a>
+      </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade" id="pills-year1" role="tabpanel" aria-labelledby="pills-year1-tab">
+        <table class="table table-hover table-dark">
+          <thead>
+            <tr>
+              <th scope="col">Subject</th>
+              <th scope="col">Grade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Computer Systems</td>
+              <td>99%</td>
+            </tr>
+            <tr>
+              <td>Web Design</td>
+              <td>81%</td>
+            </tr>
+            <tr>
+              <td>Programming I</td>
+              <td>98%</td>
+            </tr>
+            <tr>
+              <td>Problem-Solving <small> (Not attended due to sickness.) </small></td>
+              <td>38%</td>
+            </tr>
+            <tr>
+              <td>Digital Innovation</td>
+              <td>72%</td>
+            </tr>
+            <tr>
+              <td>Programming II</td>
+              <td>95%</td>
+            </tr>
+            <tr>
+              <td>Networks and Internet</td>
+              <td>78%</td>
+            </tr>
+            <tr>
+              <td>Intro. to Operating Systems</td>
+              <td>97%</td>
+            </tr>
+            <tr>
+              <td>IT Mathematics</td>
+              <td>92%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tab-pane fade show active" id="pills-year2" role="tabpanel" aria-labelledby="pills-year2-tab">
+        <table class="table table-hover table-dark">
+          <thead>
+            <tr>
+              <th scope="col">Subject</th>
+              <th scope="col">Grade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Logic</td>
+              <td>89%</td>
+            </tr>
+            <tr>
+              <td>Systems Analysis</td>
+              <td>78%</td>
+            </tr>
+            <tr>
+              <td>Introduction to Databases</td>
+              <td>72%</td>
+            </tr>
+            <tr>
+              <td>Computer Programming III</td>
+              <td>94%</td>
+            </tr>
+            <tr>
+              <td>Compt. Archit. & Assembly Level Programming</td>
+              <td>93%</td>
+            </tr>
+            <tr>
+              <td>Operating Systems</td>
+              <td>88%</td>
+            </tr>
+            <tr>
+              <td>Advanced Computer Architectures</td>
+              <td>95%</td>
+            </tr>
+            <tr>
+              <td>Probability & Statistics</td>
+              <td>82%</td>
+            </tr>
+            <tr>
+              <td>Software Testing</td>
+              <td>84%</td>
+            </tr>
+            <tr>
+              <td>Computer Programming IV</td>
+              <td>90%</td>
+            </tr>
+            <tr>
+              <td>Linear Algebra</td>
+              <td>88%</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
