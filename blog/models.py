@@ -13,4 +13,4 @@ class Paragraph(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     content = models.TextField(blank=True, default="default_content")
     main_image = models.ImageField(upload_to='post_images', blank=True)
-    caption = models.CharField(max_length=150, blank=True)
+    caption = models.CharField(max_length=300, blank=True)
